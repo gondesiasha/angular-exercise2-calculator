@@ -1,0 +1,51 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+     {{ title }}
+  </h1>
+</div>
+<br>
+<br>
+<br>
+<div align=center>
+
+  <input  type="text" disabled [value]="display" >
+  <br>
+  <input  *ngIf="result!=undefined" type='text' disabled [value]="result">
+
+  <table align=center>
+    <tr>
+      <td><a href="#" class="myButton" (click)="numClick(1)">1</a></td>
+      <td><a href="#" class="myButton" (click)="numClick(2)">2</a></td>
+      <td><a href="#" class="myButton" (click)="numClick(3)">3</a></td>
+      <td><a href="#" class="myButton" (click)="operatorClick('+')">+</a></td>
+    </tr>
+    <tr>
+        <td><a href="#" class="myButton" (click)="numClick(4)">4</a></td>
+        <td><a href="#" class="myButton" (click)="numClick(5)">5</a></td>
+        <td><a href="#" class="myButton" (click)="numClick(6)">6</a></td>
+        <td><a href="#" class="myButton" (click)="operatorClick('-')">&nbsp;-</a></td>
+     
+    </tr>
+    <tr>
+        <td><a href="#" class="myButton" (click)="numClick(7)">7</a></td>
+        <td><a href="#" class="myButton" (click)="numClick(8)">8</a></td>
+        <td><a href="#" class="myButton" (click)="numClick(9)">9</a></td>
+        <td><a href="#" class="myButton" (click)="operatorClick('X')">X</a></td>
+     
+    </tr>
+    <tr>
+        <td><a href="#" class="myButton" (click)="clearClick()">C</a></td>
+        <td><a href="#" class="myButton" (click)="numClick(0)">0</a></td>
+        <td><a href="#" class="myButton" (click)="resultClick()">=</a></td>
+        <td><a href="#" class="myButton" (click)="operatorClick('/')">&nbsp;/</a></td>
+     
+    </tr>
+    
+  </table>
+  </div>
+  
+
+
+
+<router-outlet></router-outlet>
